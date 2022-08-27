@@ -18,9 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-/*Route::group(['namespace' => 'Api'],
-    function () {
-        Route::post('/add', 'StoreController');
-    });*/
-
-Route::get('/add', 'App\Http\Controllers\Api\StoreController');
+Route::apiResources([
+    'add' => \App\Http\Controllers\Api\UserController::class,
+]);
