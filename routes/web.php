@@ -45,6 +45,9 @@ Route::get('/user_login', [\App\Http\Controllers\UserLoginController::class, 'in
     ->name('user_login');
 Route::post('/check_user', [\App\Http\Controllers\CheckController::class, 'index'])
     ->name('check_user');
+Route::get('/', [\App\Http\Controllers\StartController::class, 'index'])->name
+('home_page');
+
 
 
 Auth::routes();

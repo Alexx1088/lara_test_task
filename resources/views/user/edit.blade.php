@@ -4,6 +4,9 @@
 {{--@dd($user)--}}
     <div class="content-wrapper" style="margin-left: 0; padding: 50px 30px">
         <!-- Content Header (Page header) -->
+       <form action="{{ route('home_page') }}">
+           <input type="submit" class="btn btn-primary" value="вернутся на стартовую страницу">
+       </form>
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">

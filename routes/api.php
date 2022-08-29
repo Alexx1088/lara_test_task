@@ -32,8 +32,6 @@ Route::group([
 
 });
 
-//Route::apiResources(['add' => \App\Http\Controllers\Api\UserController::class,
-// 'index']);
 Route::apiResources(['add' => \App\Http\Controllers\Api\UserController::class,
 ]);
 
