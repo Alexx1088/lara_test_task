@@ -42,6 +42,7 @@
                                     <th>Фамилия</th>
                                     <th>Имя</th>
                                     <th>Отчество</th>
+                                    <th>Статус</th>
                                     <th>ИИН</th>
                                     <th>Дата рождения</th>
                                     <th>URL Фото</th>
@@ -57,6 +58,7 @@
                                         <td>{{ $user->surname }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->patronymic }}</td>
+                                        <td>{{ $user->status }}</td>
                                         <td>{{ $user->itn }}</td>
                                         <td>{{ $user->date_of_birth }}</td>
                                         <td>{{ $user->images}}</td>
@@ -100,6 +102,7 @@
                                         <th>Фамилия</th>
                                         <th>Имя</th>
                                         <th>Отчество</th>
+                                        <th>Статус</th>
                                         <th>ИИН</th>
                                         <th>Дата рождения</th>
                                         <th>URL Фото</th>
@@ -113,6 +116,7 @@
                                             <td>{{ $deleted_user->surname }}</td>
                                             <td>{{ $deleted_user->name }}</td>
                                             <td>{{ $deleted_user->patronymic }}</td>
+                                            <td>{{ $deleted_user->status }}</td>
                                             <td>{{ $deleted_user->itn }}</td>
                                             <td>{{ $deleted_user->data_of_birth }}</td>
                                             <td>{{ $deleted_user->images }}</td>

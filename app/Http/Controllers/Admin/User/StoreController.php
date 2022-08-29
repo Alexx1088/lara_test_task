@@ -18,9 +18,22 @@ class StoreController extends Controller
 
         $data['password'] = Hash::make($data['password']);
 
-          User::firstOrCreate(['email' => $data['email']], $data);
+        $login_email = $data['email'];
 
-        return redirect()->route('admin.user.index');
+         User::firstOrCreate(['email' => $data['email']], $data);
+
+     //   return redirect()->route('admin.user.index');
+        $users = User::all();
+        foreach ($users as $user){
+            if ($login_email === $user->email && $user->status === 2) {
+                return redirect()->route('admin.user.index');
+            }
+           else {
+               return redirect()->route('home');
+           }
+        }
+
+    //  return redirect()->route('home');
 
     }
 }

@@ -1,17 +1,7 @@
 @extends('layouts.app')
-<script>
-    import axios from 'axios';
-
-    const baseURL = 'testtask/login';
-
-    axios.post(baseURL, {
-        login: 'admin20@mail.ru',
-        password: '12345678'
-    }).then(res => console.log(res))
-        .catch(err => console.log(err))
-</script>
 
 @section('content')
+
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -19,7 +9,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('check_user') }}">
                         @csrf
 
                         <div class="row mb-3">

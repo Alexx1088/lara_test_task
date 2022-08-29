@@ -10,10 +10,7 @@ class IndexController extends Controller
 
     public function __invoke()
     {
-
        $users = User::all();
-
-   //  dd($users);
 
    $deleted_users = User::onlyTrashed()->get();
 
